@@ -12,7 +12,7 @@ class BetaWarningState extends MusicBeatState {
 
 	public override function create() {
 		#if mobile
-		addVirtualPad(NONE, B_A);
+		addVirtualPad(NONE, A_B);
 		#end
 		super.create();
 
