@@ -117,7 +117,9 @@ class FreeplayState extends MusicBeatState
 		}
 
 		DiscordUtil.call("onMenuLoaded", ["Freeplay"]);
-
+                #if mobile
+		addVirtualPad(LEFT_FULL, B_A);
+		#end
 		super.create();
 
 		// LOAD CHARACTERS
