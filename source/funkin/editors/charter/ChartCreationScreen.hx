@@ -31,7 +31,9 @@ class ChartCreationScreen extends UISubstateWindow {
 
 		winWidth = 652;
 		winHeight = 600;
-
+                #if mobile
+		addVirtualPad(LEFT_FULL, B_A)
+		#end
 		super.create();
 
 		function addLabelOn(ui:UISprite, text:String):UIText {
