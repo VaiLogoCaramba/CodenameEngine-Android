@@ -39,6 +39,9 @@ class StoryMenuState extends MusicBeatState {
 	//public var charFrames:Map<String, FlxFramesCollection> = [];
 
 	public override function create() {
+		#if mobile
+		addVirtualPad(LEFT_FULL, B_A);
+		#end
 		super.create();
 		loadXMLs();
 		persistentUpdate = persistentDraw = true;
