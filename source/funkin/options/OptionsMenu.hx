@@ -33,6 +33,9 @@ class OptionsMenu extends TreeMenu {
 	];
 
 	public override function create() {
+		#if mobile
+		addVirtualPad(LEFT_FULL, A_B);
+		#end
 		super.create();
 
 		CoolUtil.playMenuSong();
