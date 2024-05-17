@@ -32,23 +32,23 @@ class ScriptedCutscene extends Cutscene {
 	}
 
 	public override function update(elapsed:Float) {
-		script.call("update", [elapsed]);
+		script.call('update', [elapsed]);
 		super.update(elapsed);
-		script.call("postUpdate", [elapsed]);
+		script.call('postUpdate', [elapsed]);
 	}
 
 	public override function beatHit(curBeat:Int) {
 		super.beatHit(curBeat);
-		script.call("beatHit", [curBeat]);
+		script.call('beatHit', [curBeat]);
 	}
 
 	public override function stepHit(curStep:Int) {
 		super.stepHit(curStep);
-		script.call("stepHit", [curStep]);
+		script.call('stepHit', [curStep]);
 	}
 
 	public override function destroy() {
-		script.call("destroy");
+		script.call('destroy');
 		super.destroy();
 	}
 
