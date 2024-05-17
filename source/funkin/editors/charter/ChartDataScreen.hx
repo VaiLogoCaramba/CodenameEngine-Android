@@ -26,7 +26,9 @@ class ChartDataScreen extends UISubstateWindow {
 
 		winTitle = 'Chart Properties';
 		winWidth = 420; winHeight = 230; // guys look, the funny numbers!
-
+                #if mobile
+		addVirtualPad(LEFT_FULL, B_A)
+		#end
 		super.create();
 
 		function addLabelOn(ui:UISprite, text:String)
