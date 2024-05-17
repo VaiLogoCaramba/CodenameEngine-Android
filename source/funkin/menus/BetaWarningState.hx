@@ -11,6 +11,9 @@ class BetaWarningState extends MusicBeatState {
 	var transitioning:Bool = false;
 
 	public override function create() {
+		#if mobile
+		addVirtualPad(NONE, B_A);
+		#end
 		super.create();
 
 		titleAlphabet = new Alphabet(0, 0, "WARNING", true);
