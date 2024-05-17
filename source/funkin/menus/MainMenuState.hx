@@ -30,6 +30,9 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
+		#if mobile
+		addVirtualPad(UP_DOWN, B_A);
+		#end
 		super.create();
 
 		DiscordUtil.call("onMenuLoaded", ["Main Menu"]);
