@@ -50,6 +50,10 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	public override function create()
 	{
+		#if mobile
+		addVirtualPad(NONE, B_A);
+		addPadCamera()
+		#end
 		super.create();
 
 		if (FlxG.sound.music != null)
