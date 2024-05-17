@@ -107,6 +107,9 @@ class Charter extends UIState {
 	}
 
 	public override function create() {
+		#if mobile
+		addVirtualPad(UP_DOWN, B_A);
+		#end
 		super.create();
 
 		WindowUtils.suffix = " (Chart Editor)";
