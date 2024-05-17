@@ -38,6 +38,9 @@ class PauseSubState extends MusicBeatSubstate
 	var parentDisabler:FunkinParentDisabler;
 	override function create()
 	{
+		#if mobile
+		addVirtualPad(UP_DOWN, B_A);
+		#end
 		super.create();
 
 		if (menuItems.contains("Exit to charter") && !PlayState.chartingMode)
