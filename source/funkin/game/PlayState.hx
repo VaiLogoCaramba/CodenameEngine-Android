@@ -1217,7 +1217,7 @@ class PlayState extends MusicBeatState
 
 		updateRatingStuff();
 
-		if (controls.PAUSE && startedCountdown && canPause)
+		if (controls.PAUSE && #if mobile || FlxG.mobile.justReleased.BACK #end && startedCountdown && canPause)
 			pauseGame();
 
 		if (canAccessDebugMenus) {
