@@ -93,7 +93,7 @@ class EditorPicker extends MusicBeatSubstate {
 			changeSelection(Std.int(curMousePos.y / optionHeight)+1);
 		}
 
-		if (controls.ACCEPT || FlxG.mouse.justReleased) {
+		if (controls.ACCEPT !MobileControls.mobileC && || FlxG.mouse.justReleased) {
 			if (options[curSelected].state != null) {
 				selected = true;
 				CoolUtil.playMenuSFX(CONFIRM);
